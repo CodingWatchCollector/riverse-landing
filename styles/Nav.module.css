@@ -1,0 +1,120 @@
+/* NAVIGATION BAR */
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding-block: 0.2rem;
+
+  z-index: 10;
+
+  font-weight: var(--fw-bold);
+
+  background-color: hsl(var(--clr-primary--white));
+}
+
+.nav--main {
+  gap: var(--gap-xs);
+  width: 100%;
+}
+
+.toggle-nav-button {
+  display: none;
+}
+
+.nav--main__list {
+  justify-content: space-between;
+}
+
+.nav-links-wrapper {
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.logo-wrapper {
+  max-width: 10ch;
+}
+
+.nav-link {
+  padding: 0.25em 0.5em;
+  color: hsl(var(--clr-secondary--black));
+}
+
+.new-project-link {
+  background-color: hsl(var(--clr-secondary--yellow));
+  color: hsl(var(--clr-secondary--black));
+}
+
+.new-project-link:hover {
+  color: hsl(var(--clr-secondary--black));
+}
+
+li.with-sublinks-wrapper {
+  display: grid;
+  grid-template-areas:
+    'link button'
+    'sublinks sublinks';
+
+  position: relative;
+}
+
+li.with-sublinks-wrapper > .nav-link {
+  grid-area: link;
+  padding-right: 0.3em;
+}
+
+li.with-sublinks-wrapper > .expand-button {
+  grid-area: button;
+}
+
+.nav-sublinks {
+  grid-area: sublinks;
+  position: absolute;
+  left: 0;
+  width: max-content;
+  background-color: hsl(var(--clr-primary--white));
+}
+
+.nav-sublinks .nav-link {
+  display: block;
+}
+
+/* @media (min-width: 60em) {
+  .toggle-nav-button {
+    display: block;
+    margin-left: auto;
+    z-index: 10;
+  }
+
+  .nav--main {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: max(70%, 20em);
+    height: 100vh;
+    background-color: hsl(var(--clr-primary--white));
+    padding-block-start: var(--block-spacer-xs);
+    box-shadow: -0.1em 0 0.1em hsl(var(--clr-secondary--black) / 0.2);
+  }
+
+  .nav--main__list {
+    flex-direction: column;
+    gap: var(--gap);
+  }
+
+  .nav--main__list > * {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav--main .expand-button {
+    display: none;
+  }
+
+  .nav--main .expand-button + * {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    position: relative;
+  }
+} */
