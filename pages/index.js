@@ -20,7 +20,7 @@ export default function Home () {
         <title>Riverse IO</title>
         <meta name='description' content='Riverse IO landing page' />
       </Head>
-      <div className='container'>{/* <Main /> */}</div>
+      <div className='block'>{/* <Main /> */}</div>
     </>
   )
 }

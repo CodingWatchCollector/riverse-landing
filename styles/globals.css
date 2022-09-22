@@ -358,6 +358,11 @@ button:hover,
   z-index: 1;
 }
 
+.block {
+  height: 100vh;
+  background-color: white;
+}
+
 .expand-button[aria-expanded='true']:not(.menu-button) {
   transform: rotate(180deg);
 }
